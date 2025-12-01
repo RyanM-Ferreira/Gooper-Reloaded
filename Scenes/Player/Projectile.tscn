@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0ukhi5mob7en"]
+[gd_scene load_steps=11 format=3 uid="uid://b0ukhi5mob7en"]
 
 [ext_resource type="Script" uid="uid://bk2he1ub81mbi" path="res://Scripts/PlayerScripts/PlayerMiscSystems/Projectile.cs" id="1_cbqlu"]
 [ext_resource type="Texture2D" uid="uid://68vabm6rmn1o" path="res://Assets/Player/projectile.png" id="1_le5cu"]
+[ext_resource type="PackedScene" uid="uid://bwe3mn5v57erf" path="res://Scenes/Misc/Damage/Hitbox.tscn" id="3_kye6i"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbqlu"]
-size = Vector2(14, 14)
+[sub_resource type="CircleShape2D" id="CircleShape2D_kye6i"]
+radius = 7.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cbqlu"]
 atlas = ExtResource("1_le5cu")
@@ -42,14 +43,26 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Projectile" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 2
+[sub_resource type="CircleShape2D" id="CircleShape2D_hsbpc"]
+radius = 7.0
+
+[node name="Projectile" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 4
+collision_mask = 33
 script = ExtResource("1_cbqlu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_cbqlu")
+shape = SubResource("CircleShape2D_kye6i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hsbpc")
 autoplay = "default"
+
+[node name="Hitbox" parent="." instance=ExtResource("3_kye6i")]
+hitstopTimeScale = 0.7
+hitstopDuration = 0.3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_hsbpc")
+
+[connection signal="area_entered" from="Hitbox" to="." method="HitboxEntered"]

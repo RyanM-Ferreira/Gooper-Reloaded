@@ -15,7 +15,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_mj0i0")
 
 [node name="GooperLogo" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(320, 92.00001)
+position = Vector2(320, 92)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("3_35riq")
 

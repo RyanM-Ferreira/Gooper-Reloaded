@@ -1,34 +1,31 @@
-[gd_scene load_steps=67 format=3 uid="uid://b01sp7j3pnt2v"]
+[gd_scene load_steps=36 format=3 uid="uid://b01sp7j3pnt2v"]
 
 [ext_resource type="Script" uid="uid://mj85q2o3yb87" path="res://Scripts/PlayerScripts/PlayerCore.cs" id="1_vn1c7"]
-[ext_resource type="Texture2D" uid="uid://bkucijcc5ifok" path="res://Assets/Player/Gooper_v3.png" id="2_jhkym"]
+[ext_resource type="Texture2D" uid="uid://ch7d2ah516xc5" path="res://Assets/Player/Gooper_v2.png" id="2_c7vku"]
+[ext_resource type="PackedScene" uid="uid://204fyxxdcddl" path="res://Scenes/Misc/Damage/Hurtbox.tscn" id="3_c7vku"]
 
-[sub_resource type="Curve" id="Curve_jhkym"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49753773, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c7vku"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(0, 384, 64, 64)
+[sub_resource type="Curve" id="Curve_c7vku"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.0106383, 1), 0.0, 0.0, 0, 0, Vector2(0.797872, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7jkxl"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(64, 384, 64, 64)
+atlas = ExtResource("2_c7vku")
+region = Rect2(0, 384, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q6hja"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(128, 384, 64, 64)
+atlas = ExtResource("2_c7vku")
+region = Rect2(64, 384, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3phuu"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(192, 384, 64, 64)
+atlas = ExtResource("2_c7vku")
+region = Rect2(128, 384, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxpvi"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(256, 384, 64, 64)
+atlas = ExtResource("2_c7vku")
+region = Rect2(192, 384, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ly3l"]
-atlas = ExtResource("2_jhkym")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwwmx"]
+atlas = ExtResource("2_c7vku")
 region = Rect2(0, 256, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2l3y"]
@@ -143,30 +140,6 @@ region = Rect2(192, 320, 64, 64)
 atlas = ExtResource("2_jhkym")
 region = Rect2(256, 320, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_os4fj"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(0, 640, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ky4ra"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(64, 640, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_44lkm"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(128, 640, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rntgi"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(192, 640, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wfuj2"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(256, 640, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pee5u"]
-atlas = ExtResource("2_jhkym")
-region = Rect2(0, 512, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_h74yq"]
 atlas = ExtResource("2_jhkym")
 region = Rect2(64, 512, 64, 64)
@@ -219,7 +192,27 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack",
-"speed": 8.0
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwwmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7u43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndfg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8oiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrdkb")
+}],
+"loop": true,
+"name": &"Dash",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -340,40 +333,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_os4fj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ky4ra")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_44lkm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rntgi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wfuj2")
-}],
-"loop": true,
-"name": &"WallSlideDown",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pee5u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h74yq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wcty3")
-}],
-"loop": true,
-"name": &"WallSlideDownTransition",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_s4hfk")
 }, {
 "duration": 1.0,
@@ -383,408 +342,30 @@ animations = [{
 "texture": SubResource("AtlasTexture_y7h0h")
 }],
 "loop": true,
-"name": &"WallSlideUp",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kljij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dmnja")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nnyj1")
-}],
-"loop": true,
-"name": &"WallSlideUpTransition",
+"name": &"WallSlide",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_44dyf"]
 radius = 9.0
 
-[sub_resource type="Animation" id="Animation_jhkym"]
-resource_name = "Run"
-length = 0.6250125
-loop_mode = 1
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Run"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jkxl"]
+size = Vector2(33, 21)
 
-[sub_resource type="Animation" id="Animation_c7vku"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Run"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_7jkxl"]
-resource_name = "Jump"
-length = 0.5000125
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Jump"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_q6hja"]
-resource_name = "Fall"
-length = 0.3750125
-loop_mode = 1
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Fall"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_3phuu"]
-resource_name = "Dash"
-length = 0.8750125
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Dash"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6]
-}
-
-[sub_resource type="Animation" id="Animation_lxpvi"]
-resource_name = "Idle"
-length = 0.7500125
-loop_mode = 1
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-
-[sub_resource type="Animation" id="Animation_8ly3l"]
-resource_name = "WallSlideDown"
-length = 0.6250125
-loop_mode = 1
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"WallSlideDown"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="Animation" id="Animation_f2l3y"]
-resource_name = "WallSlideDownTransition"
-length = 0.3750125
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"WallSlideDownTransition"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_rht5n"]
-resource_name = "WallSlideUpTransition"
-length = 0.3750125
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"WallSlideUpTransition"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_2my2n"]
-resource_name = "WallSlideUp"
-length = 0.3750125
-loop_mode = 1
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"WallSlideUp"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_jqgub"]
-resource_name = "Attack"
-length = 0.6250125
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Attack"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="Animation" id="Animation_j56h3"]
-resource_name = "Landing"
-length = 0.16667084
-step = 0.041666668
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Landing"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.041666668, 0.083333336, 0.125),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jqgub"]
-_data = {
-&"Attack": SubResource("Animation_jqgub"),
-&"Dash": SubResource("Animation_3phuu"),
-&"Fall": SubResource("Animation_q6hja"),
-&"Idle": SubResource("Animation_lxpvi"),
-&"Jump": SubResource("Animation_7jkxl"),
-&"Landing": SubResource("Animation_j56h3"),
-&"RESET": SubResource("Animation_c7vku"),
-&"Run": SubResource("Animation_jhkym"),
-&"WallSlideDown": SubResource("Animation_8ly3l"),
-&"WallSlideDownTransition": SubResource("Animation_f2l3y"),
-&"WallSlideUp": SubResource("Animation_2my2n"),
-&"WallSlideUpTransition": SubResource("Animation_rht5n")
-}
-
-[node name="Player" type="CharacterBody2D"]
-collision_layer = 4
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
 script = ExtResource("1_vn1c7")
-_dashCurve = SubResource("Curve_jhkym")
+_dashCurve = SubResource("Curve_c7vku")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_lc851")
-animation = &"Run"
+animation = &"WallSlide"
 autoplay = "Idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5707964
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_44dyf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -797,9 +378,8 @@ target_position = Vector2(-16, 0)
 position = Vector2(6, 0)
 target_position = Vector2(16, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_jqgub")
-}
+[node name="Hurtbox" parent="." instance=ExtResource("3_c7vku")]
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="OnAnimationFinished"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_7jkxl")

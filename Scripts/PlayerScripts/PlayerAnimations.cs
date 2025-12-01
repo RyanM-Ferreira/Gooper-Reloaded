@@ -97,5 +97,6 @@ public partial class PlayerCore : CharacterBody2D
         {
             _animationPlayer.Play(animation);
         }
+
     }
 }

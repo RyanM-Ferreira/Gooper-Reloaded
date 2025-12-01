@@ -18,8 +18,8 @@ public partial class PlayerCore : CharacterBody2D
     private int _lastDirection = 1;
 
     [Export] private Curve _dashCurve;
-    public float dashSpeed = 128.0f;
-    private float _dashMaxDistance = 256.0f;
+    public float dashSpeed = 96.0f;
+    private float _dashMaxDistance = 192.0f;
     private float _dashStartPosition = 0;
     public float dashCooldown = 1.0f;
     public float dashTimer = 0;
