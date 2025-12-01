@@ -6,6 +6,8 @@ public partial class PlayerCore : CharacterBody2D
     private bool _isJumping = false;
     private bool _canJump = true;
 
+    private bool _isDashing = false;
+
     public override void _Input(InputEvent @event)
     {
         if (Input.IsActionPressed("A") && Input.IsActionPressed("D"))
@@ -23,6 +25,14 @@ public partial class PlayerCore : CharacterBody2D
         else
         {
             _direction = 0;
+        }
+
+        if (Input.IsActionJustPressed("SHIFT"))
+        {
+            if (dashTimer <= 0)
+            {
+                InitializeDash();
+            }
         }
 
         if (Input.IsActionJustPressed("SPACE"))

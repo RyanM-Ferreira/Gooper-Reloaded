@@ -5,33 +5,42 @@ public partial class PlayerCore : CharacterBody2D
 {
     private void Animations()
     {
-        _animatedSprite.FlipV = false;
-
         if (!_canAttack && !IsOnWall())
         {
-            PlayAnim("Attack");
+            PlayAnimation("Attack");
+            return;
+        }
+
+        if (_isDashing)
+        {
+            PlayAnimation("Dash");
 
             return;
         }
 
         if (!IsOnFloor() && IsOnWall())
         {
-            PlayAnim("WallSlide");
-
-            _animatedSprite.FlipV = Velocity.Y > 0;
+            if (Velocity.Y > 0)
+            {
+                PlayAnimation("WallSlideDown");
+            }
+            else if (Velocity.Y < 0)
+            {
+                PlayAnimation("WallSlideUp");
+            }
 
             return;
         }
 
         if (IsOnFloor())
         {
-            if (Velocity.X != 0)
+            if (Velocity.X != 0 && !_isDashing)
             {
-                PlayAnim("Run");
+                PlayAnimation("Run");
             }
             else if (Velocity.X == 0)
             {
-                PlayAnim("Idle");
+                PlayAnimation("Idle");
             }
 
             return;
@@ -39,15 +48,15 @@ public partial class PlayerCore : CharacterBody2D
 
         if (Velocity.Y < 0)
         {
-            PlayAnim("Jump");
+            PlayAnimation("Jump");
         }
         else
         {
-            PlayAnim("Fall");
+            PlayAnimation("Fall");
         }
     }
 
-    private void PlayAnim(string anim)
+    private void PlayAnimation(string anim)
     {
         if (_animatedSprite.Animation != anim)
         {

@@ -1,7 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://b01sp7j3pnt2v"]
+[gd_scene load_steps=35 format=3 uid="uid://b01sp7j3pnt2v"]
 
 [ext_resource type="Script" uid="uid://mj85q2o3yb87" path="res://Scripts/PlayerScripts/PlayerCore.cs" id="1_vn1c7"]
 [ext_resource type="Texture2D" uid="uid://ch7d2ah516xc5" path="res://Assets/Player/Gooper_v2.png" id="2_c7vku"]
+
+[sub_resource type="Curve" id="Curve_jhkym"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49753773, 0), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7jkxl"]
 atlas = ExtResource("2_c7vku")
@@ -111,6 +115,10 @@ region = Rect2(192, 320, 64, 64)
 atlas = ExtResource("2_c7vku")
 region = Rect2(256, 320, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7vku"]
+atlas = ExtResource("2_c7vku")
+region = Rect2(0, 512, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhkym"]
 atlas = ExtResource("2_c7vku")
 region = Rect2(0, 448, 64, 64)
@@ -144,7 +152,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ndfg2")
 }, {
-"duration": 1.0,
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_j8oiv")
 }, {
 "duration": 1.0,
@@ -152,7 +160,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dash",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -235,10 +243,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_c7vku")
+}],
+"loop": true,
+"name": &"WallSlideDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_jhkym")
 }],
 "loop": true,
-"name": &"WallSlide",
+"name": &"WallSlideUp",
 "speed": 5.0
 }]
 
@@ -246,12 +262,14 @@ animations = [{
 radius = 9.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_vn1c7")
+_dashCurve = SubResource("Curve_jhkym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_lc851")
-animation = &"Attack"
+animation = &"Dash"
 autoplay = "Idle"
 flip_h = true
 

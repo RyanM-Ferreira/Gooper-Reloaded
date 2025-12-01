@@ -17,6 +17,13 @@ public partial class PlayerCore : CharacterBody2D
     private int _direction = 0;
     private int _lastDirection = 1;
 
+    [Export] private Curve _dashCurve;
+    public float dashSpeed = 128.0f;
+    private float _dashMaxDistance = 256.0f;
+    private float _dashStartPosition = 0;
+    public float dashCooldown = 1.0f;
+    public float dashTimer = 0;
+
     // ! Mó Preguiçakkkkkkkkk
     // private bool _extendJump = false;
     // private float _decelerateOnJumpRelease = 0.5f;  // * Up to 1.0f
@@ -51,7 +58,14 @@ public partial class PlayerCore : CharacterBody2D
             _isJumping = false;
         }
 
+        if (_isDashing)
+        {
+            ApplyDash();
+        }
+
         CorrectTranlation();
+
+        DashTimer(delta);
 
         MoveAndSlide();
     }
@@ -61,6 +75,38 @@ public partial class PlayerCore : CharacterBody2D
         if (_direction != 0 && _direction != Scale.Y)
         {
             Scale = new Vector2(Scale.X * -1, Scale.Y);
+        }
+    }
+
+    private void InitializeDash()
+    {
+        _isDashing = true;
+        _dashStartPosition = Position.X;
+        dashTimer = dashCooldown;
+    }
+
+    private void ApplyDash()
+    {
+        float currentDistance = Math.Abs(Position.X - _dashStartPosition);
+
+        int dashDirection = _direction != 0 ? _direction : _lastDirection;
+
+        if (currentDistance >= _dashMaxDistance || IsOnWall())
+        {
+            _isDashing = false;
+        }
+        else
+        {
+            float curveFactor = _dashCurve.Sample(Math.Abs(currentDistance / _dashMaxDistance));
+            Velocity = new Vector2(Velocity.X + dashDirection * dashSpeed * curveFactor, Velocity.Y);
+        }
+    }
+
+    private void DashTimer(float delta)
+    {
+        if (dashTimer > 0)
+        {
+            dashTimer -= delta;
         }
     }
 }
