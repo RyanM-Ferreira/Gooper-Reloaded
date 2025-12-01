@@ -14,18 +14,20 @@ public partial class Brushte : Enemy
 
     public override void _Ready()
     {
-        base._Ready();
+        maxHealth = 5;
 
         right = GetNodeOrNull<RayCast2D>("Right");
         left = GetNodeOrNull<RayCast2D>("Left");
         rightBottom = GetNodeOrNull<RayCast2D>("RightBottom");
         leftBottom = GetNodeOrNull<RayCast2D>("LeftBottom");
+
+        base._Ready();
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        base._PhysicsProcess(delta);
         MoveBrushte((float)delta);
+        base._PhysicsProcess(delta);
     }
 
     public void MoveBrushte(float delta)

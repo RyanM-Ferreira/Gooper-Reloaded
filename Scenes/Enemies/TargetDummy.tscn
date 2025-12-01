@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0bhjfs1tsu51"]
+[gd_scene load_steps=8 format=3 uid="uid://bbdeakf3oul6k"]
 
-[ext_resource type="Script" uid="uid://clcfq7gfrr4od" path="res://Scripts/EnemyScripts/TargetDummy/TargetDummy.cs" id="1_blsci"]
+[ext_resource type="Script" uid="uid://djciw4cc8o3au" path="res://Scripts/Enemies/TargetDummy.cs" id="1_5mcig"]
 [ext_resource type="Texture2D" uid="uid://c5t0ldei6bbcp" path="res://Assets/Enemies/TargetDummy/TargetDummy.png" id="1_dghxh"]
 [ext_resource type="PackedScene" uid="uid://204fyxxdcddl" path="res://Scenes/Misc/Damage/Hurtbox.tscn" id="3_xilri"]
 
@@ -27,17 +27,19 @@ size = Vector2(42, 59)
 
 [node name="TargetDummy" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 8
-script = ExtResource("1_blsci")
+script = ExtResource("1_5mcig")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_xilri")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -29.5)
 shape = SubResource("RectangleShape2D_nknco")
 
 [node name="Hurtbox" parent="." groups=["Enemy"] instance=ExtResource("3_xilri")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2(0, -29.5)

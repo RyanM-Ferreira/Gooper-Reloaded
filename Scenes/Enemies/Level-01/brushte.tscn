@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bm6ua4pssuwhq"]
+[gd_scene load_steps=11 format=3 uid="uid://bm6ua4pssuwhq"]
 
 [ext_resource type="Script" uid="uid://cpxtakalny7ie" path="res://Scripts/Enemies/Level-01/Brushte.cs" id="1_im2ia"]
 [ext_resource type="Texture2D" uid="uid://54hvv34lbeyu" path="res://Assets/Enemies/Brushte/BrushteWalk.png" id="2_rc3ox"]
+[ext_resource type="PackedScene" uid="uid://204fyxxdcddl" path="res://Scenes/Misc/Damage/Hurtbox.tscn" id="4_ip3vh"]
+[ext_resource type="PackedScene" uid="uid://bwe3mn5v57erf" path="res://Scenes/Misc/Damage/Hitbox.tscn" id="4_wh0mj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ip3vh"]
 atlas = ExtResource("2_rc3ox")
@@ -26,10 +28,16 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_po5o0"]
-radius = 22.0
-height = 54.0
+radius = 14.0
+height = 52.0
 
-[node name="Brushte" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rc3ox"]
+size = Vector2(44, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8tcx"]
+size = Vector2(44, 58)
+
+[node name="Brushte" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_im2ia")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -41,7 +49,7 @@ autoplay = "Run"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(0, 5)
+position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_po5o0")
 
 [node name="Left" type="RayCast2D" parent="."]
@@ -59,3 +67,16 @@ target_position = Vector2(0, 32)
 [node name="LeftBottom" type="RayCast2D" parent="."]
 position = Vector2(-20, 0)
 target_position = Vector2(0, 48)
+
+[node name="Hurtbox" parent="." groups=["Enemy"] instance=ExtResource("4_ip3vh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_rc3ox")
+
+[node name="Hitbox" parent="." instance=ExtResource("4_wh0mj")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_i8tcx")
+debug_color = Color(0.79320097, 0.38574016, 0.49039698, 0.41960785)

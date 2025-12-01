@@ -11,6 +11,8 @@ public partial class PlayerCore : CharacterBody2D
 
 	public override void _Ready()
 	{
+		health = maxHealth;
+
 		_animatedSprite = GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
 		_animationPlayer = GetNodeOrNull<AnimationPlayer>("AnimationPlayer");
 
