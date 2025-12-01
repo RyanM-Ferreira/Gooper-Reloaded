@@ -3,8 +3,31 @@ using System;
 
 public partial class PlayerCore : CharacterBody2D
 {
+    private bool _isPlayingLanding = false;
+
+    public void OnAnimationFinished(StringName animationName)
+    {
+        switch (animationName)
+        {
+            case "WallSlideDownTransition":
+                PlayAnimation("WallSlideDown");
+                break;
+            case "WallSlideUpTransition":
+                PlayAnimation("WallSlideUp");
+                break;
+            case "Landing":
+                _isPlayingLanding = false;
+                break;
+        }
+    }
+
     private void Animations()
     {
+        if (_isPlayingLanding)
+        {
+            return;
+        }
+
         if (!_canAttack && !IsOnWall())
         {
             PlayAnimation("Attack");
@@ -14,19 +37,31 @@ public partial class PlayerCore : CharacterBody2D
         if (_isDashing)
         {
             PlayAnimation("Dash");
+            return;
+        }
 
+        if (_justLanded)
+        {
+            _isPlayingLanding = true;
+            PlayAnimation("Landing");
             return;
         }
 
         if (!IsOnFloor() && IsOnWall())
         {
-            if (Velocity.Y > 0)
+            bool inTransition = _animationPlayer.CurrentAnimation == "WallSlideDownTransition" || _animationPlayer.CurrentAnimation == "WallSlideUpTransition";
+
+            if (!inTransition)
             {
-                PlayAnimation("WallSlideDown");
-            }
-            else if (Velocity.Y < 0)
-            {
-                PlayAnimation("WallSlideUp");
+                if (Velocity.Y > 0 && _animationPlayer.CurrentAnimation != "WallSlideDown")
+                {
+                    PlayAnimation("WallSlideDownTransition");
+                }
+
+                else if (Velocity.Y < 0 && _animationPlayer.CurrentAnimation != "WallSlideUp")
+                {
+                    PlayAnimation("WallSlideUpTransition");
+                }
             }
 
             return;
@@ -56,11 +91,11 @@ public partial class PlayerCore : CharacterBody2D
         }
     }
 
-    private void PlayAnimation(string anim)
+    private void PlayAnimation(string animation)
     {
-        if (_animatedSprite.Animation != anim)
+        if (_animationPlayer.CurrentAnimation != animation)
         {
-            _animatedSprite.Play(anim);
+            _animationPlayer.Play(animation);
         }
     }
 }

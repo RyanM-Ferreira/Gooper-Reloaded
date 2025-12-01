@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch7d2ah516xc5"
-path="res://.godot/imported/Gooper_v2.png-96fc4d5e557ab08c5071cb7553197139.ctex"
+uid="uid://bkucijcc5ifok"
+path="res://.godot/imported/Gooper_v3.png-1bb3058189dcf48b64e25fcc2955d17e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Gooper_v2.png"
-dest_files=["res://.godot/imported/Gooper_v2.png-96fc4d5e557ab08c5071cb7553197139.ctex"]
+source_file="res://Assets/Player/Gooper_v3.png"
+dest_files=["res://.godot/imported/Gooper_v3.png-1bb3058189dcf48b64e25fcc2955d17e.ctex"]
 
 [params]
 

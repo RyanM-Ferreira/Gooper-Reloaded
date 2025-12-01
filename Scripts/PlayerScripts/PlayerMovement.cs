@@ -6,7 +6,7 @@ public partial class PlayerCore : CharacterBody2D
     private float _gravity;
     private float _defaultGravity = (float)ProjectSettings.GetSetting("physics/2d/default_gravity");
 
-    public float verticalStickyModifier = 15.0f;
+    public float verticalStickyModifier = 0.05f;
 
     public float speed { get; set; } = 250.0f;
     public float jumpForce { get; set; } = -400.0f;
@@ -33,9 +33,10 @@ public partial class PlayerCore : CharacterBody2D
 
     private void ProcessMovement(float delta)
     {
+        _gravity = IsOnWall() ? verticalStickyModifier : _defaultGravity;
         _canJump = IsOnFloor() || IsOnWall();
-
-        _gravity = IsOnWall() ? _defaultGravity / verticalStickyModifier : _defaultGravity;
+        _justLanded = !_wasOnFloor && IsOnFloor();
+        _wasOnFloor = IsOnFloor();
 
         if (!IsOnFloor())
         {
@@ -64,7 +65,6 @@ public partial class PlayerCore : CharacterBody2D
         }
 
         CorrectTranlation();
-
         DashTimer(delta);
 
         MoveAndSlide();
