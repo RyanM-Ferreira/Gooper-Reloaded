@@ -15,7 +15,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_mj0i0")
 
 [node name="GooperLogo" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(320, 92.00001)
+position = Vector2(320, 92)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("3_35riq")
 
@@ -77,7 +77,7 @@ offset_left = 412.0
 offset_top = 122.0
 offset_right = 537.0
 offset_bottom = 156.0
-theme_override_colors/font_color = Color(0.26867998, 0.9340393, 0.57573676, 1)
+theme_override_colors/font_color = Color(0.26868, 0.934039, 0.575737, 1)
 theme_override_font_sizes/font_size = 24
 text = "RELOADED"
 

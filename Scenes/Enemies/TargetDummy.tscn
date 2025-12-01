@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0bhjfs1tsu51"]
+
+[ext_resource type="Script" uid="uid://clcfq7gfrr4od" path="res://Scripts/EnemyScripts/TargetDummy/TargetDummy.cs" id="1_blsci"]
+[ext_resource type="Texture2D" uid="uid://c5t0ldei6bbcp" path="res://Assets/Enemies/TargetDummy/TargetDummy.png" id="1_dghxh"]
+[ext_resource type="PackedScene" uid="uid://204fyxxdcddl" path="res://Scenes/Misc/Damage/Hurtbox.tscn" id="3_xilri"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blsci"]
+atlas = ExtResource("1_dghxh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xilri"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blsci")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nknco"]
+size = Vector2(42, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mcig"]
+size = Vector2(42, 59)
+
+[node name="TargetDummy" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 8
+script = ExtResource("1_blsci")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_xilri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -29.5)
+shape = SubResource("RectangleShape2D_nknco")
+
+[node name="Hurtbox" parent="." groups=["Enemy"] instance=ExtResource("3_xilri")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -29.5)
+shape = SubResource("RectangleShape2D_5mcig")

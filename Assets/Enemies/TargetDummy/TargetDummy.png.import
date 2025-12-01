@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxelgdfnfr25i"
-path="res://.godot/imported/Tileset.png-2279e53ab93c40b329c247888cff51e2.ctex"
+uid="uid://c5t0ldei6bbcp"
+path="res://.godot/imported/TargetDummy.png-d2b0cc280c68a6430c2b51736c82e7ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Scenery/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-2279e53ab93c40b329c247888cff51e2.ctex"]
+source_file="res://Assets/Enemies/TargetDummy/TargetDummy.png"
+dest_files=["res://.godot/imported/TargetDummy.png-d2b0cc280c68a6430c2b51736c82e7ec.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b01sp7j3pnt2v" path="res://Scenes/Player/PlayerCore.tscn" id="1_usdoe"]
 [ext_resource type="Texture2D" uid="uid://cxelgdfnfr25i" path="res://Assets/Scenery/Tileset/Tileset.png" id="2_wjsl7"]
-[ext_resource type="PackedScene" uid="uid://bm6ua4pssuwhq" path="res://Scenes/Enemies/Level-01/brushte.tscn" id="3_d6mxq"]
+[ext_resource type="PackedScene" uid="uid://c0bhjfs1tsu51" path="res://Scenes/Enemies/TargetDummy.tscn" id="3_d6mxq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d6mxq"]
 texture = ExtResource("2_wjsl7")

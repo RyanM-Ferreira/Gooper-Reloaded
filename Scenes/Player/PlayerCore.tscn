@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mj85q2o3yb87" path="res://Scripts/PlayerScripts/PlayerCore.cs" id="1_vn1c7"]
 [ext_resource type="Texture2D" uid="uid://ch7d2ah516xc5" path="res://Assets/Player/Gooper_v2.png" id="2_c7vku"]
+[ext_resource type="PackedScene" uid="uid://204fyxxdcddl" path="res://Scenes/Misc/Damage/Hurtbox.tscn" id="3_c7vku"]
 
 [sub_resource type="Curve" id="Curve_jhkym"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49753773, 0), 0.0, 0.0, 0, 0]
@@ -274,7 +275,7 @@ autoplay = "Idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5707964
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_44dyf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -286,3 +287,9 @@ target_position = Vector2(-16, 0)
 [node name="RightColliding" type="RayCast2D" parent="."]
 position = Vector2(6, 0)
 target_position = Vector2(16, 0)
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_c7vku")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_7jkxl")
