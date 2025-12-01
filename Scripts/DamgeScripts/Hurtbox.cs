@@ -21,7 +21,7 @@ public partial class Hurtbox : Area2D
         }
         else
         {
-            Owner.Call("TakeDamage", hitbox.Get("damage"), (float)hitbox.Get("Knockback"), hitbox.Get("hitstopTimeScale"), hitbox.Get("hitstopDuration"), hitbox.GlobalPosition);
+            Owner.Call("TakeDamage", hitbox.Get("damage"), hitbox.Get("hitstopTimeScale"), hitbox.Get("hitstopDuration"), hitbox.GlobalPosition);
         }
 
     }

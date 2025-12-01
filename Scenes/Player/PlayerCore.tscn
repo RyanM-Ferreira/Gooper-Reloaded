@@ -4,10 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://ch7d2ah516xc5" path="res://Assets/Player/Gooper_v2.png" id="2_c7vku"]
 [ext_resource type="PackedScene" uid="uid://204fyxxdcddl" path="res://Scenes/Misc/Damage/Hurtbox.tscn" id="3_c7vku"]
 
-[sub_resource type="Curve" id="Curve_jhkym"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49753773, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7jkxl"]
 atlas = ExtResource("2_c7vku")
 region = Rect2(0, 384, 64, 64)
@@ -116,10 +112,6 @@ region = Rect2(192, 320, 64, 64)
 atlas = ExtResource("2_c7vku")
 region = Rect2(256, 320, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c7vku"]
-atlas = ExtResource("2_c7vku")
-region = Rect2(0, 512, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhkym"]
 atlas = ExtResource("2_c7vku")
 region = Rect2(0, 448, 64, 64)
@@ -153,7 +145,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ndfg2")
 }, {
-"duration": 4.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_j8oiv")
 }, {
 "duration": 1.0,
@@ -161,7 +153,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dash",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -244,33 +236,27 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c7vku")
-}],
-"loop": true,
-"name": &"WallSlideDown",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_jhkym")
 }],
 "loop": true,
-"name": &"WallSlideUp",
+"name": &"WallSlide",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_44dyf"]
 radius = 9.0
 
-[node name="Player" type="CharacterBody2D"]
-collision_layer = 4
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jkxl"]
+size = Vector2(33, 21)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
 script = ExtResource("1_vn1c7")
-_dashCurve = SubResource("Curve_jhkym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_lc851")
-animation = &"Dash"
+animation = &"Attack"
 autoplay = "Idle"
 flip_h = true
 
