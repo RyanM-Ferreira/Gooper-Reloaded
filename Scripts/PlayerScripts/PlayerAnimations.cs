@@ -22,11 +22,13 @@ public partial class PlayerCore : CharacterBody2D
         {
             if (Velocity.Y > 0)
             {
-                PlayAnimation("WallSlideDown");
+                _animatedSprite.FlipV = true;
+                PlayAnimation("WallSlide");
             }
             else if (Velocity.Y < 0)
             {
-                PlayAnimation("WallSlideUp");
+                _animatedSprite.FlipV = false;
+                PlayAnimation("WallSlide");
             }
 
             return;
@@ -58,9 +60,14 @@ public partial class PlayerCore : CharacterBody2D
 
     private void PlayAnimation(string anim)
     {
+        if(anim != "WallSlide")
+        {
+            _animatedSprite.FlipV = false;
+        }
         if (_animatedSprite.Animation != anim)
         {
             _animatedSprite.Play(anim);
         }
+
     }
 }

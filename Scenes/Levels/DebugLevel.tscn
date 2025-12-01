@@ -40,8 +40,5 @@ tile_set = SubResource("TileSet_n4bcv")
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Brushte" parent="Enemies" instance=ExtResource("3_d6mxq")]
-position = Vector2(38, 28)
-
-[node name="Brushte2" parent="Enemies" instance=ExtResource("3_d6mxq")]
-position = Vector2(254, -146)
+[node name="TargetDummy" parent="Enemies" instance=ExtResource("3_d6mxq")]
+position = Vector2(-317, -16)
