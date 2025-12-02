@@ -45,7 +45,7 @@ public partial class Hurtbox : Area2D
 
     public void OnAreaExited(Area2D hitbox)
     {
-        if (hitbox.Owner != null && hitbox.Owner.IsInGroup("Player"))
+        if (hitbox.Owner != null && Owner.IsInGroup("Player"))
         {
             _isPlayerInside = false;
             _playerHitbox = null;
@@ -55,16 +55,14 @@ public partial class Hurtbox : Area2D
 
     public void PlayerDamageTick()
     {
-        if (!_isPlayerInside || _playerHitbox == null)
+        if (!_isPlayerInside || _playerHitbox == null || !IsInsideTree() || !_damageTimer.IsInsideTree())
         {
             return;
         }
-        else
-        {
-            Owner.Call("PlayerHurt", _playerHitbox.Get("damage"), _playerHitbox.Get("hitstopTimeScale"), _playerHitbox.Get("hitstopDuration"));
 
-            _damageTimer.WaitTime = _timerWait;
-            _damageTimer.Start();
-        }
+        Owner.Call("PlayerHurt", _playerHitbox.Get("damage"), _playerHitbox.Get("hitstopTimeScale"), _playerHitbox.Get("hitstopDuration"));
+
+        _damageTimer.WaitTime = _timerWait;
+        _damageTimer.Start();
     }
 }

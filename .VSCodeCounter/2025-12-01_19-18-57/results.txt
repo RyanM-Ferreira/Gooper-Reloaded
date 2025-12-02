@@ -1,0 +1,122 @@
+Date : 2025-12-01 19:18:57
+Directory : /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded
+Total : 60 files,  2300 codes, 10 comments, 416 blanks, all 2726 lines
+
+Languages
++-----------------------------+------------+------------+------------+------------+------------+
+| language                    | files      | code       | comment    | blank      | total      |
++-----------------------------+------------+------------+------------+------------+------------+
+| GDScene                     |          8 |      1,048 |          0 |        158 |      1,206 |
+| C#                          |         16 |        613 |          3 |        129 |        745 |
+| GDResource                  |         15 |        508 |          0 |         90 |        598 |
+| Godot Project Definition    |          1 |         63 |          7 |         18 |         88 |
+| Asset Properties Definition |         17 |         58 |          0 |         20 |         78 |
+| XML                         |          2 |          9 |          0 |          1 |         10 |
+| Markdown                    |          1 |          1 |          0 |          0 |          1 |
++-----------------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                          | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                             |         60 |      2,300 |         10 |        416 |      2,726 |
+| . (Files)                                                                                                                     |          6 |        153 |          7 |         29 |        189 |
+| Assets                                                                                                                        |         14 |        470 |          0 |         84 |        554 |
+| Assets/Background                                                                                                             |          1 |         35 |          0 |          6 |         41 |
+| Assets/Enemies                                                                                                                |          2 |         70 |          0 |         12 |         82 |
+| Assets/Enemies/Brushte                                                                                                        |          1 |         35 |          0 |          6 |         41 |
+| Assets/Enemies/TargetDummy                                                                                                    |          1 |         35 |          0 |          6 |         41 |
+| Assets/Fonts                                                                                                                  |          5 |        155 |          0 |         30 |        185 |
+| Assets/Fonts (Files)                                                                                                          |          1 |         31 |          0 |          6 |         37 |
+| Assets/Fonts/Static                                                                                                           |          4 |        124 |          0 |         24 |        148 |
+| Assets/Logos                                                                                                                  |          1 |         35 |          0 |          6 |         41 |
+| Assets/Player                                                                                                                 |          4 |        140 |          0 |         24 |        164 |
+| Assets/Scenery                                                                                                                |          1 |         35 |          0 |          6 |         41 |
+| Assets/Scenery/Tileset                                                                                                        |          1 |         35 |          0 |          6 |         41 |
+| Scenes                                                                                                                        |          8 |      1,048 |          0 |        158 |      1,206 |
+| Scenes/Enemies                                                                                                                |          2 |        100 |          0 |         30 |        130 |
+| Scenes/Enemies (Files)                                                                                                        |          1 |         36 |          0 |         11 |         47 |
+| Scenes/Enemies/Level-01                                                                                                       |          1 |         64 |          0 |         19 |         83 |
+| Scenes/Levels                                                                                                                 |          1 |         46 |          0 |         13 |         59 |
+| Scenes/Menu                                                                                                                   |          1 |         66 |          0 |         11 |         77 |
+| Scenes/Misc                                                                                                                   |          2 |         18 |          0 |          8 |         26 |
+| Scenes/Misc/Damage                                                                                                            |          2 |         18 |          0 |          8 |         26 |
+| Scenes/Player                                                                                                                 |          2 |        818 |          0 |         96 |        914 |
+| Scripts                                                                                                                       |         32 |        629 |          3 |        145 |        777 |
+| Scripts/Damage                                                                                                                |          4 |         72 |          0 |         12 |         84 |
+| Scripts/Enemies                                                                                                               |          6 |        106 |          0 |         29 |        135 |
+| Scripts/Enemies (Files)                                                                                                       |          4 |         58 |          0 |         16 |         74 |
+| Scripts/Enemies/Level-01                                                                                                      |          2 |         48 |          0 |         13 |         61 |
+| Scripts/MainMenu                                                                                                              |          2 |         21 |          0 |          5 |         26 |
+| Scripts/MiscScripts                                                                                                           |          2 |         21 |          0 |          4 |         25 |
+| Scripts/PlayerScripts                                                                                                         |         18 |        409 |          3 |         95 |        507 |
+| Scripts/PlayerScripts (Files)                                                                                                 |         14 |        327 |          3 |         71 |        401 |
+| Scripts/PlayerScripts/PlayerMiscSystems                                                                                       |          4 |         82 |          0 |         24 |        106 |
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------+------------+------------+------------+
+| filename                                                                                                                      | language                    | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------+------------+------------+------------+
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Background/NightScenery.png.import                 | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Enemies/Brushte/BrushteWalk.png.import             | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Enemies/TargetDummy/TargetDummy.png.import         | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/PixelifySans-VariableFont_wght.ttf.import    | GDResource                  |         31 |          0 |          6 |         37 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/Static/PixelifySans-Bold.ttf.import          | GDResource                  |         31 |          0 |          6 |         37 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/Static/PixelifySans-Medium.ttf.import        | GDResource                  |         31 |          0 |          6 |         37 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/Static/PixelifySans-Regular.ttf.import       | GDResource                  |         31 |          0 |          6 |         37 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/Static/PixelifySans-SemiBold.ttf.import      | GDResource                  |         31 |          0 |          6 |         37 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Logos/gooperLogo.png.import                        | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Player/Gooper_v3.png.import                        | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Player/PlayerHealth.png.import                     | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Player/Slime.png.import                            | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Player/projectile.png.import                       | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Scenery/Tileset/Tileset.png.import                 | GDResource                  |         35 |          0 |          6 |         41 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Gooper Reloaded.csproj                                    | XML                         |          8 |          0 |          0 |          8 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/README.md                                                 | Markdown                    |          1 |          0 |          0 |          1 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Enemies/Level-01/brushte.tscn                      | GDScene                     |         64 |          0 |         19 |         83 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Enemies/TargetDummy.tscn                           | GDScene                     |         36 |          0 |         11 |         47 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Levels/DebugLevel.tscn                             | GDScene                     |         46 |          0 |         13 |         59 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Menu/MainMenu.tscn                                 | GDScene                     |         66 |          0 |         11 |         77 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Misc/Damage/Hitbox.tscn                            | GDScene                     |          6 |          0 |          3 |          9 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Misc/Damage/Hurtbox.tscn                           | GDScene                     |         12 |          0 |          5 |         17 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Player/PlayerCore.tscn                             | GDScene                     |        764 |          0 |         81 |        845 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Player/Projectile.tscn                             | GDScene                     |         54 |          0 |         15 |         69 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Damage/Hitbox.cs                                  | C#                          |          9 |          0 |          1 |         10 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Damage/Hitbox.cs.uid                              | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Damage/Hurtbox.cs                                 | C#                          |         61 |          0 |          9 |         70 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Damage/Hurtbox.cs.uid                             | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/Enemy.cs                                  | C#                          |         41 |          0 |         10 |         51 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/Enemy.cs.uid                              | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/Level-01/Brushte.cs                       | C#                          |         47 |          0 |         12 |         59 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/Level-01/Brushte.cs.uid                   | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/TargetDummy.cs                            | C#                          |         15 |          0 |          4 |         19 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/TargetDummy.cs.uid                        | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/MainMenu/MainMenu.cs                              | C#                          |         20 |          0 |          4 |         24 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/MainMenu/MainMenu.cs.uid                          | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/MiscScripts/Hitstop.Cs                            | C#                          |         20 |          0 |          3 |         23 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/MiscScripts/Hitstop.Cs.uid                        | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerAnimations.cs                 | C#                          |         87 |          0 |         15 |        102 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerAnimations.cs.uid             | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerAttack.cs                     | C#                          |         38 |          0 |          8 |         46 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerAttack.cs.uid                 | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerCore.cs                       | C#                          |         26 |          0 |          8 |         34 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerCore.cs.uid                   | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerEffects.cs                    | C#                          |         10 |          0 |          1 |         11 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerEffects.cs.uid                | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerHealth.cs                     | C#                          |         23 |          0 |          5 |         28 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerHealth.cs.uid                 | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerInput.cs                      | C#                          |         48 |          0 |          6 |         54 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerInput.cs.uid                  | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMiscSystems/PlayerUi.cs       | C#                          |         40 |          0 |         12 |         52 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMiscSystems/PlayerUi.cs.uid   | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMiscSystems/Projectile.cs     | C#                          |         40 |          0 |         10 |         50 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMiscSystems/Projectile.cs.uid | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMovement.cs                   | C#                          |         88 |          3 |         21 |        112 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMovement.cs.uid               | Asset Properties Definition |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/export_presets.cfg                                        | Asset Properties Definition |         42 |          0 |          4 |         46 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/icon.svg                                                  | XML                         |          1 |          0 |          1 |          2 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/icon.svg.import                                           | GDResource                  |         38 |          0 |          6 |         44 |
+| /run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/project.godot                                             | Godot Project Definition    |         63 |          7 |         18 |         88 |
+| Total                                                                                                                         |                             |      2,300 |         10 |        416 |      2,726 |
++-------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------+------------+------------+------------+

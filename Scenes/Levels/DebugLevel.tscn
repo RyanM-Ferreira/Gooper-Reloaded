@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://drv6o4ouva7cb"]
+[gd_scene load_steps=10 format=4 uid="uid://drv6o4ouva7cb"]
 
 [ext_resource type="PackedScene" uid="uid://b01sp7j3pnt2v" path="res://Scenes/Player/PlayerCore.tscn" id="1_usdoe"]
 [ext_resource type="Texture2D" uid="uid://cxelgdfnfr25i" path="res://Assets/Scenery/Tileset/Tileset.png" id="2_wjsl7"]
 [ext_resource type="PackedScene" uid="uid://bbdeakf3oul6k" path="res://Scenes/Enemies/TargetDummy.tscn" id="3_d6mxq"]
 [ext_resource type="PackedScene" uid="uid://bm6ua4pssuwhq" path="res://Scenes/Enemies/Level-01/brushte.tscn" id="4_n4bcv"]
 [ext_resource type="PackedScene" uid="uid://bwe3mn5v57erf" path="res://Scenes/Misc/Damage/Hitbox.tscn" id="5_1dw2v"]
+[ext_resource type="PackedScene" uid="uid://bfixxc7lokw5o" path="res://Scenes/Scenery/ParallaxBackground.tscn" id="6_qbb5k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d6mxq"]
 texture = ExtResource("2_wjsl7")
@@ -34,6 +35,8 @@ sources/0 = SubResource("TileSetAtlasSource_d6mxq")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbb5k"]
 
 [node name="DebugLevel" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("6_qbb5k")]
 
 [node name="Player" parent="." instance=ExtResource("1_usdoe")]
 position = Vector2(-278, -51)

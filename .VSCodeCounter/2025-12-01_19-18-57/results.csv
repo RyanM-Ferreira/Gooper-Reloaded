@@ -1,0 +1,62 @@
+"filename", "language", "GDResource", "Godot Project Definition", "XML", "Asset Properties Definition", "Markdown", "C#", "GDScene", "comment", "blank", "total"
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Background/NightScenery.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Enemies/Brushte/BrushteWalk.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Enemies/TargetDummy/TargetDummy.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/PixelifySans-VariableFont_wght.ttf.import", "GDResource", 31, 0, 0, 0, 0, 0, 0, 0, 6, 37
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/Static/PixelifySans-Bold.ttf.import", "GDResource", 31, 0, 0, 0, 0, 0, 0, 0, 6, 37
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/Static/PixelifySans-Medium.ttf.import", "GDResource", 31, 0, 0, 0, 0, 0, 0, 0, 6, 37
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/Static/PixelifySans-Regular.ttf.import", "GDResource", 31, 0, 0, 0, 0, 0, 0, 0, 6, 37
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Fonts/Static/PixelifySans-SemiBold.ttf.import", "GDResource", 31, 0, 0, 0, 0, 0, 0, 0, 6, 37
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Logos/gooperLogo.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Player/Gooper_v3.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Player/PlayerHealth.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Player/Slime.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Player/projectile.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Assets/Scenery/Tileset/Tileset.png.import", "GDResource", 35, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Gooper Reloaded.csproj", "XML", 0, 0, 8, 0, 0, 0, 0, 0, 0, 8
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/README.md", "Markdown", 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Enemies/Level-01/brushte.tscn", "GDScene", 0, 0, 0, 0, 0, 0, 64, 0, 19, 83
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Enemies/TargetDummy.tscn", "GDScene", 0, 0, 0, 0, 0, 0, 36, 0, 11, 47
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Levels/DebugLevel.tscn", "GDScene", 0, 0, 0, 0, 0, 0, 46, 0, 13, 59
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Menu/MainMenu.tscn", "GDScene", 0, 0, 0, 0, 0, 0, 66, 0, 11, 77
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Misc/Damage/Hitbox.tscn", "GDScene", 0, 0, 0, 0, 0, 0, 6, 0, 3, 9
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Misc/Damage/Hurtbox.tscn", "GDScene", 0, 0, 0, 0, 0, 0, 12, 0, 5, 17
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Player/PlayerCore.tscn", "GDScene", 0, 0, 0, 0, 0, 0, 764, 0, 81, 845
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scenes/Player/Projectile.tscn", "GDScene", 0, 0, 0, 0, 0, 0, 54, 0, 15, 69
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Damage/Hitbox.cs", "C#", 0, 0, 0, 0, 0, 9, 0, 0, 1, 10
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Damage/Hitbox.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Damage/Hurtbox.cs", "C#", 0, 0, 0, 0, 0, 61, 0, 0, 9, 70
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Damage/Hurtbox.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/Enemy.cs", "C#", 0, 0, 0, 0, 0, 41, 0, 0, 10, 51
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/Enemy.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/Level-01/Brushte.cs", "C#", 0, 0, 0, 0, 0, 47, 0, 0, 12, 59
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/Level-01/Brushte.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/TargetDummy.cs", "C#", 0, 0, 0, 0, 0, 15, 0, 0, 4, 19
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/Enemies/TargetDummy.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/MainMenu/MainMenu.cs", "C#", 0, 0, 0, 0, 0, 20, 0, 0, 4, 24
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/MainMenu/MainMenu.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/MiscScripts/Hitstop.Cs", "C#", 0, 0, 0, 0, 0, 20, 0, 0, 3, 23
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/MiscScripts/Hitstop.Cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerAnimations.cs", "C#", 0, 0, 0, 0, 0, 87, 0, 0, 15, 102
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerAnimations.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerAttack.cs", "C#", 0, 0, 0, 0, 0, 38, 0, 0, 8, 46
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerAttack.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerCore.cs", "C#", 0, 0, 0, 0, 0, 26, 0, 0, 8, 34
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerCore.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerEffects.cs", "C#", 0, 0, 0, 0, 0, 10, 0, 0, 1, 11
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerEffects.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerHealth.cs", "C#", 0, 0, 0, 0, 0, 23, 0, 0, 5, 28
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerHealth.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerInput.cs", "C#", 0, 0, 0, 0, 0, 48, 0, 0, 6, 54
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerInput.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMiscSystems/PlayerUi.cs", "C#", 0, 0, 0, 0, 0, 40, 0, 0, 12, 52
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMiscSystems/PlayerUi.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMiscSystems/Projectile.cs", "C#", 0, 0, 0, 0, 0, 40, 0, 0, 10, 50
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMiscSystems/Projectile.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMovement.cs", "C#", 0, 0, 0, 0, 0, 88, 0, 3, 21, 112
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/Scripts/PlayerScripts/PlayerMovement.cs.uid", "Asset Properties Definition", 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/export_presets.cfg", "Asset Properties Definition", 0, 0, 0, 42, 0, 0, 0, 0, 4, 46
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/icon.svg", "XML", 0, 0, 1, 0, 0, 0, 0, 0, 1, 2
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/icon.svg.import", "GDResource", 38, 0, 0, 0, 0, 0, 0, 0, 6, 44
+"/run/media/ryanf/Ventoy/RyanF/Projects/Github/Godot/Gooper-Reloaded/project.godot", "Godot Project Definition", 0, 63, 0, 0, 0, 0, 0, 7, 18, 88
+"Total", "-", 508, 63, 9, 58, 1, 613, 1048, 10, 416, 2726
