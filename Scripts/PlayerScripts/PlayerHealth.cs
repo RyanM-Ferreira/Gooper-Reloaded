@@ -15,7 +15,7 @@ public partial class PlayerCore : CharacterBody2D
 
         if (health <= 0)
         {
-            GetTree().ReloadCurrentScene();
+            GetTree().CreateTimer(0.5).Timeout += () => GetTree().ReloadCurrentScene();
             return;
         }
         else

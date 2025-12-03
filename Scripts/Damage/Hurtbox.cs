@@ -25,27 +25,31 @@ public partial class Hurtbox : Area2D
             }
         }
 
-        switch (Owner.Name)
+        if (Owner.IsInGroup("Player"))
         {
-            case "Player":
-                Owner.Call("PlayerHurt", hitbox.Get("damage"), hitbox.Get("hitstopTimeScale"), hitbox.Get("hitstopDuration"));
-                _isPlayerInside = true;
-                _playerHitbox = hitbox;
-                _damageTimer.Start();
-                break;
-            case "TargetDummy":
-            case "Brushte":
-                Owner.Call("TakeDamage", hitbox.Get("damage"), hitbox.Get("hitstopTimeScale"), hitbox.Get("hitstopDuration"));
-                break;
-            default:
-                Owner.Call("TakeDamage", hitbox.Get("damage"), hitbox.Get("hitstopTimeScale"), hitbox.Get("hitstopDuration"), hitbox.GlobalPosition);
-                break;
+            Owner.Call("PlayerHurt", hitbox.Get("damage"), hitbox.Get("hitstopTimeScale"), hitbox.Get("hitstopDuration"));
+            _isPlayerInside = true;
+            _playerHitbox = hitbox;
+            _damageTimer.Start();
+        }
+        else if (Owner.IsInGroup("Enemy"))
+        {
+            Owner.Call("TakeDamage", hitbox.Get("damage"), hitbox.Get("hitstopTimeScale"), hitbox.Get("hitstopDuration"));
+        }
+        else
+        {
+            Owner.Call("TakeDamage", hitbox.Get("damage"), hitbox.Get("hitstopTimeScale"), hitbox.Get("hitstopDuration"), hitbox.GlobalPosition);
         }
     }
 
     public void OnAreaExited(Area2D hitbox)
     {
-        if (hitbox.Owner != null && Owner.IsInGroup("Player"))
+        if (hitbox.Owner == null)
+        {
+            return;
+        }
+
+        if (Owner.IsInGroup("Player"))
         {
             _isPlayerInside = false;
             _playerHitbox = null;
